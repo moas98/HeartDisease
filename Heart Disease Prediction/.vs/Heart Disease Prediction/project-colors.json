@@ -1,0 +1,11 @@
+{
+  "Version": 1,
+  "ProjectMap": {
+    "d8f7ad13-33db-4b7b-87ff-4632d956bb19": {
+      "ProjectGuid": "d8f7ad13-33db-4b7b-87ff-4632d956bb19",
+      "DisplayName": "Heart Disease Prediction",
+      "ColorIndex": 0
+    }
+  },
+  "NextColorIndex": 1
+}
