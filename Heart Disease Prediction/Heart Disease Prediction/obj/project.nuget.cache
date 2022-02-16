@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "TneEnlykT52VrFDqMw3Auo/wyalIHBbcENguSZ72zP1uO30FAzg93pcTu6gyKdq76R6g9nHfYpKfxFqtnfcAWA==",
+  "dgSpecHash": "y0UpypeWjwWaNChgFwzXQXRUTTA5kc0dkaPeGx96JpA6mj1rIIIFXOgQwuF0L65qFfI4JIGFtMSuaZi+Cr+pPg==",
   "success": true,
-  "projectFilePath": "C:\\Users\\HP\\Desktop\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
+  "projectFilePath": "C:\\Users\\HP\\Desktop\\New folder\\HeartDisease\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.html.abstractions\\2.2.0\\microsoft.aspnetcore.html.abstractions.2.2.0.nupkg.sha512",
     "C:\\Users\\HP\\.nuget\\packages\\microsoft.aspnetcore.razor\\2.2.0\\microsoft.aspnetcore.razor.2.2.0.nupkg.sha512",

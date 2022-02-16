@@ -6396,11 +6396,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\HP\\Desktop\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
+      "projectUniqueName": "C:\\Users\\HP\\Desktop\\New folder\\HeartDisease\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
       "projectName": "Heart Disease Prediction",
-      "projectPath": "C:\\Users\\HP\\Desktop\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
+      "projectPath": "C:\\Users\\HP\\Desktop\\New folder\\HeartDisease\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
       "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\HP\\Desktop\\Heart Disease Prediction\\Heart Disease Prediction\\obj\\",
+      "outputPath": "C:\\Users\\HP\\Desktop\\New folder\\HeartDisease\\Heart Disease Prediction\\Heart Disease Prediction\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
