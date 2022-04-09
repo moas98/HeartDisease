@@ -12,15 +12,18 @@ namespace Heart_Disease_Prediction.Controllers
     public class HomeController : Controller
     {
         private readonly ILogger<HomeController> _logger;
+        private readonly AppDbContext context;
 
-        public HomeController(ILogger<HomeController> logger)
+        public HomeController(ILogger<HomeController> logger , AppDbContext context)
         {
+            this.context = context;
             _logger = logger;
         }
 
         public IActionResult Index()
         {
-            return View();
+        var states= context.states.ToList();
+            return View(states);
         }
 
         public IActionResult Privacy()

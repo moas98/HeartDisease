@@ -1,8 +1,142 @@
-﻿@{
-    ViewData["Title"] = "Home Page";
-}
+﻿@model IEnumerable<Heart_Disease_Prediction.Models.entity>
 
+@{
+    ViewData["Title"] = "Index";
+}
 <div class="text-center">
-    <h1 class="display-4">Welcome</h1>
-    <p>Learn about <a href="https://docs.microsoft.com/aspnet/core">building Web apps with ASP.NET Core</a>.</p>
+    <h1 class="display-4">Welcome To Heart Disease Prediction
+</h1>
+    <p>This Project Made By Rahmma , Supervised by Dr.Hiba Amir</p>
 </div>
+
+<h1>Store</h1>
+
+<p>
+    <a asp-controller="HeartDisease" asp-action="Predict">Create New</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.Id)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Age)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Sex)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Cp)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.TrestBps)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Chol)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Fbs)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.RestEcg)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thalac)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Exang)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.OldPeak)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Slope)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Ca)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Thal)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Label)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Probability)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Score)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Prediction)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+@foreach (var item in Model) {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => item.Id)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Age)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Sex)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Cp)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.TrestBps)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Chol)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Fbs)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.RestEcg)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thalac)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Exang)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.OldPeak)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Slope)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Ca)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Thal)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Label)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Probability)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Score)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => item.Prediction)
+            </td>
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
+                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+            </td>
+        </tr>
+}
+    </tbody>
+</table>
