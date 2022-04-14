@@ -36,5 +36,6 @@ namespace Heart_Disease_Prediction.Models
         public float Probability { get; set; }
         public float Score { get; set; }
         public bool Prediction { get; set; }
+        public string Name { get; set; }
     }
 }

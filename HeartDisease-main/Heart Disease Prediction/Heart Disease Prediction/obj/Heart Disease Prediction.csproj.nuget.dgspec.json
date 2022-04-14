@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\HP\\Desktop\\github\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj": {}
+    "D:\\Kafeel\\GitHub\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj": {}
   },
   "projects": {
-    "C:\\Users\\HP\\Desktop\\github\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj": {
+    "D:\\Kafeel\\GitHub\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\HP\\Desktop\\github\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
+        "projectUniqueName": "D:\\Kafeel\\GitHub\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
         "projectName": "Heart Disease Prediction",
-        "projectPath": "C:\\Users\\HP\\Desktop\\github\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
-        "packagesPath": "C:\\Users\\HP\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\HP\\Desktop\\github\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\obj\\",
+        "projectPath": "D:\\Kafeel\\GitHub\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\Heart Disease Prediction.csproj",
+        "packagesPath": "C:\\Users\\moar9\\.nuget\\packages\\",
+        "outputPath": "D:\\Kafeel\\GitHub\\HeartDisease\\HeartDisease-main\\Heart Disease Prediction\\Heart Disease Prediction\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\HP\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Users\\moar9\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
@@ -91,7 +91,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

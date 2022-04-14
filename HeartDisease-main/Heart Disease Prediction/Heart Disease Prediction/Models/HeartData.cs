@@ -1,4 +1,5 @@
 ﻿using Microsoft.ML.Data;
+using System.ComponentModel.DataAnnotations;
 
 namespace Heart_Disease_Prediction.Models
 {
@@ -32,5 +33,8 @@ namespace Heart_Disease_Prediction.Models
         public float Thal { get; set; }
         [LoadColumn(13)]
         public bool Label { get; set; }
+        [LoadColumn(14)]
+        [Required]
+        public string Name { get; set; }
     }
 }

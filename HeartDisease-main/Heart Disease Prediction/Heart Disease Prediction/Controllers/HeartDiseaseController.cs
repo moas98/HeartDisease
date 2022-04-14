@@ -23,7 +23,7 @@ namespace Heart_Disease_Prediction.Controllers
             model.Build();
             var result = model.Consume(input);
             ViewBag.HeartPrediction = result;
-            ViewBag.result = result;
+            
             if (result !=null)
             {
                 var entityModel = new entity
@@ -45,9 +45,12 @@ namespace Heart_Disease_Prediction.Controllers
                     Prediction= result.Prediction,
                     Probability = result.Probability,
                     Score = result.Score,
+                    Name =input.Name,
                 };
                 context.states.Add(entityModel);
+
                 context.SaveChanges();
+                ViewBag.id =entityModel.Id;
             }
             return View();
         }

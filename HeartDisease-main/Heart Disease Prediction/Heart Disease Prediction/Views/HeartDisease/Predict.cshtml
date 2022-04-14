@@ -1,156 +1,180 @@
 ﻿@model Heart_Disease_Prediction.Models.HeartData
 @{
-ViewData["Title"] = "Predict";
+    ViewData["Title"] = "Predict";
 }
 <!-- Font Awesome -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
-  rel="stylesheet"
-/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.1/css/all.min.css"
+      rel="stylesheet" />
 <!-- Google Fonts -->
-<link
-  href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
-  rel="stylesheet"
-/>
+<link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700&display=swap"
+      rel="stylesheet" />
 <!-- MDB -->
-<link
-  href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
-  rel="stylesheet"
-/>
+<link href="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.css"
+      rel="stylesheet" />
 
 
 <h1>Predict</h1>
 
 <h4>HeartData</h4>
 <hr />
-<div class="row">  
-    <form asp-action="Predict" class="col-md-8">  
-        <div asp-validation-summary="ModelOnly" class="text-danger"></div>  
-        <div class="row">  
-            <div class="col-md-4">  
-                <div class="row form-group">  
-                    <div class="form-group col-md-6">  
-                        <label asp-for="Age" class="control-label"></label>  
-                        <input asp-for="Age" class="form-control" />  
-                        <span asp-validation-for="Age" class="text-danger"></span>  
-                    </div>  
-                    <div class="form-group col-md-6">  
-                        <label asp-for="Sex" class="control-label"></label>  
-                        <select asp-for="Sex" class="form-control">  
-                            <option value="1">Male</option>  
-                            <option value="0">Female</option>  
-                        </select>  
-                        <span asp-validation-for="Sex" class="text-danger"></span>  
-                    </div>  
-                </div>  
-                  
-                <div class="form-group">  
-                    <label asp-for="Cp" class="control-label"></label>  
-                    <select asp-for="Cp" class="form-control" >  
-                        <option value="1">typical angina</option>  
-                        <option value="2">atypical angina</option>  
-                        <option value="3">non-anginal pain</option>  
-                        <option value="4">asymptomatic</option>  
-                    </select>  
-                    <span asp-validation-for="Cp" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="TrestBps" class="control-label"></label>  
-                    <input asp-for="TrestBps" class="form-control" />  
-                    <span asp-validation-for="TrestBps" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="Chol" class="control-label"></label>  
-                    <input asp-for="Chol" class="form-control" />  
-                    <span asp-validation-for="Chol" class="text-danger"></span>  
-                </div>  
-                  
-  
-            </div>  
-            <div class="col-md-4">  
-                  
-                <div class="form-group">  
-                    <label asp-for="Fbs" class="control-label"></label>  
-                    <input asp-for="Fbs" class="form-control" />  
-                    <span asp-validation-for="Fbs" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="RestEcg" class="control-label"></label>  
-                    <select asp-for="RestEcg" class="form-control" >  
-                        <option value="0">normal</option>  
-                        <option value="1">having ST-T wave abnormality</option>  
-                        <option value="2">showing probable or definite left ventricular hypertrophy by Estes' criteria</option>  
-                    </select>  
-                    <span asp-validation-for="RestEcg" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="Thalac" class="control-label"></label>  
-                    <select asp-for="Thalac" class="form-control" >  
-                        <option value="3">normal</option>  
-                        <option value="6">fixed defect</option>  
-                        <option value="7">reversible defect</option>  
-                    </select>  
-                    <span asp-validation-for="Thalac" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="Exang" class="control-label"></label>  
-                    <select asp-for="Exang" class="form-control" >  
-                        <option value="1">yes</option>  
-                        <option value="0">no</option>  
-                    </select>  
-                    <span asp-validation-for="Exang" class="text-danger"></span>  
-                </div>  
-  
-            </div>  
-            <div class="col-md-4">  
-                  
-                <div class="form-group">  
-                    <label asp-for="OldPeak" class="control-label"></label>  
-                    <input asp-for="OldPeak" class="form-control" />  
-                    <span asp-validation-for="OldPeak" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="Slope" class="control-label"></label>  
-                    <select asp-for="Slope" class="form-control" >  
-                        <option value="1">upsloping</option>  
-                        <option value="2">flat</option>  
-                        <option value="3">downsloping</option>  
-                    </select>  
-                    <span asp-validation-for="Slope" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="Ca" class="control-label"></label>  
-                    <input asp-for="Ca" class="form-control" />  
-                    <span asp-validation-for="Ca" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <label asp-for="Thal" class="control-label"></label>  
-                    <input asp-for="Thal" class="form-control" />  
-                    <span asp-validation-for="Thal" class="text-danger"></span>  
-                </div>  
-                <div class="form-group">  
-                    <input type="submit" value="Predict" class="btn btn-primary" />  
-                </div>  
-            </div>  
-        </div>  
-    </form>  
-    @if (ViewBag.HeartPrediction != null)  
-    {  
-        <div class="col-md-4">  
-              <h1>Result</h1>
-      <br/>
-           <b class="chip chip-outline btn-outline-secondary" data-mdb-ripple-color="dark" >Prediction </b>  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark" >@ViewBag.HeartPrediction.Prediction</b>  <br/><br/>
-            <b class="chip chip-outline btn-outline-secondary" data-mdb-ripple-color="dark">Probability </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark" >@ViewBag.HeartPrediction.Probability</b>  <br/><br/>
-            <b class="chip chip-outline btn-outline-secondary" data-mdb-ripple-color="dark">Score </b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; <b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark" >@ViewBag.HeartPrediction.Score</b>  <br/><br/>
-        </div>   
-        
-    }  
-</div> 
+<div class="row">
+    <form asp-action="Predict" class="col-md-8">
+        <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+        <div class="row">
+            <div class="col-md-4">
+                <div class="row form-group">
+                    <div class="form-group col-md-6">
+                        <label asp-for="Name" class="control-label"></label>
+                        <input asp-for="Name" class="form-control" />
+                        <span asp-validation-for="Name" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Age" class="control-label"></label>
+                        <input asp-for="Age" class="form-control" />
+                        <span asp-validation-for="Age" class="text-danger"></span>
+                    </div>
+                    <div class="form-group col-md-6">
+                        <label asp-for="Sex" class="control-label"></label>
+                        <select asp-for="Sex" class="form-control">
+                            <option value="1">Male</option>
+                            <option value="0">Female</option>
+                        </select>
+                        <span asp-validation-for="Sex" class="text-danger"></span>
+                    </div>
+                </div>
+
+                <div class="form-group">
+                    <label asp-for="Cp" class="control-label"></label>
+                    <select asp-for="Cp" class="form-control">
+                        <option value="1">typical angina</option>
+                        <option value="2">atypical angina</option>
+                        <option value="3">non-anginal pain</option>
+                        <option value="4">asymptomatic</option>
+                    </select>
+                    <span asp-validation-for="Cp" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="TrestBps" class="control-label"></label>
+                    <input asp-for="TrestBps" class="form-control" />
+                    <span asp-validation-for="TrestBps" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Chol" class="control-label"></label>
+                    <input asp-for="Chol" class="form-control" />
+                    <span asp-validation-for="Chol" class="text-danger"></span>
+                </div>
+
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label asp-for="Fbs" class="control-label"></label>
+                    <input asp-for="Fbs" class="form-control" />
+                    <span asp-validation-for="Fbs" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="RestEcg" class="control-label"></label>
+                    <select asp-for="RestEcg" class="form-control">
+                        <option value="0">normal</option>
+                        <option value="1">having ST-T wave abnormality</option>
+                        <option value="2">showing probable or definite left ventricular hypertrophy by Estes' criteria</option>
+                    </select>
+                    <span asp-validation-for="RestEcg" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Thalac" class="control-label"></label>
+                    <select asp-for="Thalac" class="form-control">
+                        <option value="3">normal</option>
+                        <option value="6">fixed defect</option>
+                        <option value="7">reversible defect</option>
+                    </select>
+                    <span asp-validation-for="Thalac" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Exang" class="control-label"></label>
+                    <select asp-for="Exang" class="form-control">
+                        <option value="1">yes</option>
+                        <option value="0">no</option>
+                    </select>
+                    <span asp-validation-for="Exang" class="text-danger"></span>
+                </div>
+
+            </div>
+            <div class="col-md-4">
+
+                <div class="form-group">
+                    <label asp-for="OldPeak" class="control-label"></label>
+                    <input asp-for="OldPeak" class="form-control" />
+                    <span asp-validation-for="OldPeak" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Slope" class="control-label"></label>
+                    <select asp-for="Slope" class="form-control">
+                        <option value="1">upsloping</option>
+                        <option value="2">flat</option>
+                        <option value="3">downsloping</option>
+                    </select>
+                    <span asp-validation-for="Slope" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Ca" class="control-label"></label>
+                    <input asp-for="Ca" class="form-control" />
+                    <span asp-validation-for="Ca" class="text-danger"></span>
+                </div>
+                <div class="form-group">
+                    <label asp-for="Thal" class="control-label"></label>
+                    <input asp-for="Thal" class="form-control" />
+                    <span asp-validation-for="Thal" class="text-danger"></span>
+                </div>
+                
+            </div>
+        </div>
+        <div class="form-group">
+                    <input type="submit" value="Predict" class="btn btn-primary" />
+                </div>
+    </form>
+
+</div>
+
+@if (ViewBag.HeartPrediction != null)
+{
+    <hr />
+    <div class="col-md-4">
+        <h1>Result</h1>
+        <br />
+        <div style="display: inline-flex;">
+            <div style="display: inline-flex;" class="chip chip-outline btn-outline-secondary">
+                <b class="mx-3 chip chip-outline btn-outline-dark" data-mdb-ripple-color="dark">Prediction </b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark">@ViewBag.HeartPrediction.Prediction</b>
+            </div>   
+            <div style="display: inline-flex;" class="chip chip-outline btn-outline-secondary">
+                <b class=" mx-3 chip chip-outline btn-outline-dark" data-mdb-ripple-color="dark">Probability </b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark">@ViewBag.HeartPrediction.Probability</b>
+            </div>    
+            <div style="display: inline-flex;" class="chip chip-outline btn-outline-secondary">
+                <b class="mx-3 chip chip-outline btn-outline-dark" data-mdb-ripple-color="dark">Score </b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark">@ViewBag.HeartPrediction.Score</b>
+            </div>   
+            <div style="display: inline-flex;"  class="chip chip-outline btn-outline-secondary">
+
+                <b class=" chip chip-outline btn-outline-dark" data-mdb-ripple-color="dark">Id </b>
+                &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                <b class="chip chip-outline btn-outline-praymary" data-mdb-ripple-color="dark">@ViewBag.id</b>
+            </div>
+         
+        </div>
+    </div>
+
+}
 <!-- MDB -->
-<script
-  type="text/javascript"
-  src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"
-></script>
+<script type="text/javascript"
+        src="https://cdnjs.cloudflare.com/ajax/libs/mdb-ui-kit/3.3.0/mdb.min.js"></script>
 @section Scripts {
-    @{await Html.RenderPartialAsync("_ValidationScriptsPartial");}
+    @{
+    await Html.RenderPartialAsync("_ValidationScriptsPartial");
+}
 }

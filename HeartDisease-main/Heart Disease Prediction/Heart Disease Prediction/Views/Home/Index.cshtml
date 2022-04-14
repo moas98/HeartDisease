@@ -14,64 +14,64 @@
 <p>
     <a asp-controller="HeartDisease" asp-action="Predict">Create New</a>
 </p>
-<table class="table">
-    <thead>
+<table class="table table-bordered">
+    <thead class="thead-dark">
         <tr>
-            <th>
+            <th scope="col">
                 @Html.DisplayNameFor(model => model.Id)
-            </th>
-            <th>
+            </th scope="col">
+            <th scope="col">
+                @Html.DisplayNameFor(model => model.Name)
+            </th scope="col">
+            <th scope="col"> 
                 @Html.DisplayNameFor(model => model.Age)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Sex)
+            <th scope="col">
+                 @Html.DisplayNameFor(model => model.Sex)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Cp)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.TrestBps)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Chol)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Fbs)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.RestEcg)
             </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Cp)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.TrestBps)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Chol)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Fbs)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.RestEcg)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Thalac)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Exang)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.OldPeak)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Slope)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Ca)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Thal)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Label)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Probability)
-            </th>
-            <th>
-                @Html.DisplayNameFor(model => model.Score)
-            </th>
-            <th>
+            <th  scope="col" >
+                 @Html.DisplayNameFor(model => model.Thalac)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Exang)
+            </th >
+            <th  scope="col" > 
+                 @Html.DisplayNameFor(model => model.OldPeak)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Slope)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Ca)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Thal)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Probability)
+            </th >
+            <th  scope="col"> 
+                 @Html.DisplayNameFor(model => model.Score)
+            </th >
+            <th  scope="col">  
                 @Html.DisplayNameFor(model => model.Prediction)
             </th>
-            <th></th>
+            <th >Action</th>
         </tr>
     </thead>
     <tbody>
@@ -81,11 +81,20 @@
                 @Html.DisplayFor(modelItem => item.Id)
             </td>
             <td>
+                @Html.DisplayFor(modelItem => item.Name)
+            </td>
+            <td>
                 @Html.DisplayFor(modelItem => item.Age)
             </td>
             <td>
-                @Html.DisplayFor(modelItem => item.Sex)
-            </td>
+                    @if(item.Sex == 1)
+                    {
+                         <i class="material-icons" style="font-size:25px;">male</i>
+                    } else
+                    {
+           <i class="material-icons" style="font-size:25px;">female</i>
+                    }
+                </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Cp)
             </td>
@@ -119,22 +128,36 @@
             <td>
                 @Html.DisplayFor(modelItem => item.Thal)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Label)
-            </td>
+          
             <td>
                 @Html.DisplayFor(modelItem => item.Probability)
             </td>
             <td>
                 @Html.DisplayFor(modelItem => item.Score)
             </td>
-            <td>
-                @Html.DisplayFor(modelItem => item.Prediction)
+            <td style="text-align:center;">
+                
+                @*@Html.DisplayFor(modelItem => item.Prediction)*@
+                @{
+                    if (item.Prediction)
+                    {
+                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart" viewBox="0 0 16 16">
+  <path fill-rule="evenodd" d="M10.5 3.5a2.5 2.5 0 0 0-5 0V4h5v-.5Zm1 0V4H15v10a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V4h3.5v-.5a3.5 3.5 0 1 1 7 0ZM14 14V5H2v9a1 1 0 0 0 1 1h10a1 1 0 0 0 1-1ZM8 7.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+</svg>
+                    }
+                    else
+                        {
+                       <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bag-heart-fill" viewBox="0 0 16 16">
+  <path d="M11.5 4v-.5a3.5 3.5 0 1 0-7 0V4H1v10a2 2 0 0 0 2 2h10a2 2 0 0 0 2-2V4h-3.5ZM8 1a2.5 2.5 0 0 1 2.5 2.5V4h-5v-.5A2.5 2.5 0 0 1 8 1Zm0 6.993c1.664-1.711 5.825 1.283 0 5.132-5.825-3.85-1.664-6.843 0-5.132Z"/>
+</svg>
+                        }
+
+                }
             </td>
             <td>
-                @Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |
-                @Html.ActionLink("Delete", "Delete", new { /* id=item.PrimaryKey */ })
+                @*@Html.ActionLink("Edit", "Edit", new { /* id=item.PrimaryKey */ }) |*@
+                @*@Html.ActionLink("Details", "Details", new { /* id=item.PrimaryKey */ }) |*@
+                @Html.ActionLink("Delete", "Delete", new {  id=item.Id  })
             </td>
         </tr>
 }

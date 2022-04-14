@@ -25,7 +25,14 @@ namespace Heart_Disease_Prediction.Controllers
         var states= context.states.ToList();
             return View(states);
         }
-
+        
+        public RedirectToActionResult Delete(int Id)
+        {
+            var state = context.states.SingleOrDefault(x => x.Id == Id);
+            context.states.Remove(state);
+            context.SaveChanges();
+            return RedirectToAction(nameof(Index));
+        }
         public IActionResult Privacy()
         {
             return View();
